@@ -45,7 +45,7 @@ class App extends Component {
   }
   render() {
     return (
-      <themeContext.Provider value={this.state.color}>
+      <themeContext.Provider theme={this.state.color}>
         <div className="App">
           <input
             value="button"
