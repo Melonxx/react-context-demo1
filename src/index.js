@@ -32,10 +32,26 @@ class App extends Component {
       color: "red"
     };
   }
+  changeColor() {
+    if (this.state.color === "red") {
+      this.setState({
+        color: "green"
+      });
+    } else {
+      this.setState({
+        color: "red"
+      });
+    }
+  }
   render() {
     return (
       <themeContext.Provider value={this.state.color}>
         <div className="App">
+          <input
+            value="button"
+            onClick={this.changeColor.bind(this)}
+            type="button"
+          />
           <themeContext.Consumer>
             {n => (
               <div>
